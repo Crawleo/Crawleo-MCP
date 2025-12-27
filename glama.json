@@ -8,12 +8,12 @@
   "repository": "https://github.com/Crawleo/Crawleo-MCP",
   "tools": [
     {
-      "name": "web.search",
-      "description": "Real-time web search with multiple output formats"
+      "name": "search_web",
+      "description": "Search the web using Crawleo's AI-powered search engine with optional AI-enhanced HTML and markdown content"
     },
     {
-      "name": "web.crawl",
-      "description": "Deep content extraction from any URL"
+      "name": "crawl_web",
+      "description": "Crawl a specific webpage and extract its content in various formats"
     }
   ]
 }

@@ -1,0 +1,25 @@
+# Source files (we publish compiled dist)
+src/
+
+# Config files
+tsconfig.json
+.gitignore
+.env*
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.github/
+
+# Test files
+*.test.ts
+*.spec.ts
+__tests__/
+coverage/
+
+# Other
+smithery.yaml
+glama.json

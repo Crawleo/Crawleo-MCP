@@ -26,6 +26,62 @@ Crawleo MCP enables AI assistants to access live web data through two powerful t
 
 ---
 
+## Installation
+
+### Option 1: NPM (Recommended for local usage)
+
+Install globally via npm:
+
+```bash
+npm install -g crawleo-mcp
+```
+
+Or use npx without installing:
+
+```bash
+npx crawleo-mcp
+```
+
+### Option 2: Clone Repository
+
+```bash
+git clone https://github.com/Crawleo/Crawleo-MCP.git
+cd Crawleo-MCP
+npm install
+npm run build
+```
+
+### Option 3: Docker
+
+Build and run using Docker:
+
+```bash
+# Build the image
+docker build -t crawleo-mcp .
+
+# Run with your API key
+docker run -e CRAWLEO_API_KEY=your_api_key crawleo-mcp
+```
+
+**Docker configuration for MCP clients:**
+
+```json
+{
+  "mcpServers": {
+    "crawleo": {
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "-e", "CRAWLEO_API_KEY=YOUR_API_KEY_HERE", "crawleo-mcp"]
+    }
+  }
+}
+```
+
+### Option 4: Remote Server (No installation needed)
+
+Use the hosted version at `https://api.crawleo.dev/mcp` - see configuration examples below.
+
+---
+
 ## Getting Your API Key
 
 1. Visit [crawleo.dev](https://crawleo.dev)
@@ -37,7 +93,62 @@ Crawleo MCP enables AI assistants to access live web data through two powerful t
 
 ## Setup Instructions
 
-### 1. Claude Desktop
+### Using Local MCP Server (npm package)
+
+After installing via npm, configure your MCP client to use the local server:
+
+**Claude Desktop / Cursor / Windsurf (Local):**
+
+```json
+{
+  "mcpServers": {
+    "crawleo": {
+      "command": "npx",
+      "args": ["crawleo-mcp"],
+      "env": {
+        "CRAWLEO_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+**Or if installed globally:**
+
+```json
+{
+  "mcpServers": {
+    "crawleo": {
+      "command": "crawleo-mcp",
+      "env": {
+        "CRAWLEO_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+**From cloned repository:**
+
+```json
+{
+  "mcpServers": {
+    "crawleo": {
+      "command": "node",
+      "args": ["/path/to/Crawleo-MCP/dist/index.js"],
+      "env": {
+        "CRAWLEO_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  }
+}
+```
+
+---
+
+### Using Remote Server (Hosted)
+
+#### 1. Claude Desktop
 
 **Location of config file:**
 
