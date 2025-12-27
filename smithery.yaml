@@ -1,0 +1,18 @@
+# Smithery configuration file
+# https://smithery.ai/docs/config#smitheryyaml
+
+mcpServer:
+  transport: http
+  url: https://api.crawleo.dev/mcp
+
+  headersSchema:
+    type: object
+    required:
+      - authorization
+    properties:
+      authorization:
+        type: string
+        description: >
+          Authorization header in the format:
+          Please Get it from https://www.crawleo.dev/dashboard/api-keys
+          Bearer YOUR_CRAWLEO_API_KEY
