@@ -4,6 +4,9 @@
   <img width="380" height="200" src="https://glama.ai/mcp/servers/@crawleo/crawleo-mcp/badge" alt="Crawleo MCP server" />
 </a>
 
+
+[![smithery badge](https://smithery.ai/badge/crawleo/crawleo)](https://smithery.ai/server/crawleo/crawleo)
+
 Real-time web search and crawling capabilities for AI assistants through Model Context Protocol (MCP).
 
 ## Overview
