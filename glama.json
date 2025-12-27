@@ -1,0 +1,19 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "name": "Crawleo MCP Server",
+  "description": "Real-time web search and crawling capabilities for AI assistants through Model Context Protocol (MCP)",
+  "maintainers": [
+    "Crawleo"
+  ],
+  "repository": "https://github.com/Crawleo/Crawleo-MCP",
+  "tools": [
+    {
+      "name": "web.search",
+      "description": "Real-time web search with multiple output formats"
+    },
+    {
+      "name": "web.crawl",
+      "description": "Deep content extraction from any URL"
+    }
+  ]
+}

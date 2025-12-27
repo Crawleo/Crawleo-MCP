@@ -1,5 +1,9 @@
 # Crawleo MCP Server
 
+<a href="https://glama.ai/mcp/servers/@crawleo/crawleo-mcp">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@crawleo/crawleo-mcp/badge" alt="Crawleo MCP server" />
+</a>
+
 Real-time web search and crawling capabilities for AI assistants through Model Context Protocol (MCP).
 
 ## Overview
