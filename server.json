@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Crawleo/Crawleo-MCP",
+  "title": "Crawleo MCP",
+  "description": "Hosted Crawleo MCP (remote streamable HTTP endpoint).",
+  "repository": {
+    "url": "https://github.com/Crawleo/Crawleo-MCP",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "name": "Crawleo Hosted MCP",
+      "url": "https://api.crawleo.dev/mcp",
+      "description": "Hosted Crawleo MCP endpoint for remote MCP clients. Streams MCP events over HTTP.",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Crawleo API token for authentication. Example: 'Bearer <CRAWLEO_API_KEY>'",
+          "required": true,
+          "secret": true
+        }
+      ],
+      "environment_variables": [
+        {
+          "name": "CRAWLEO_API_KEY",
+          "description": "Your Crawleo API key (kept secret). Set this in your environment and include as 'Authorization: Bearer <key>'.",
+          "required": true,
+          "format": "string",
+          "secret": true
+        }
+      ]
+    }
+  ]
+}
